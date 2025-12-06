@@ -6,8 +6,13 @@
 
 <body>
 <a-scene>
-    <a-light type="ambient" color="#FFFFFF" intensity="1.5"></a-light>
 
+    <!-- LUCES -->
+    <a-entity light="type: ambient; color: #ffffff; intensity: 1.2"></a-entity>
+    <a-entity light="type: directional; color: #ffffff; intensity: 0.9" position="2 4 3"></a-entity>
+    <a-entity light="type: point; intensity: 0.6; distance: 8" position="0 2 2"></a-entity>
+
+    <!-- MODELO -->
     <a-entity 
         obj-model="obj: toa.obj; mtl: toa.mtl"
         position="0 0 -3"
@@ -15,15 +20,16 @@
         rotation="0 180 0">
     </a-entity>
 
+    <!-- PLANO Y CIELO -->
     <a-plane position="0 -3 -4" rotation="-90 0 0" width="20" height="20" color="#2DFD5B"></a-plane>
     <a-sky color="#F17DAE"></a-sky>
 
+    <!-- CÁMARA -->
     <a-entity camera look-controls wasd-controls position="0 1.5 3"></a-entity>
+
 </a-scene>
 </body>
 </html>
-
-
 
 
 
